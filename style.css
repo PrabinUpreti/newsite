@@ -1,9 +1,10 @@
-body,
+*,
 button {
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
 }
+
 header {
   height: 10vh;
   display: flex;
@@ -11,26 +12,31 @@ header {
   margin: auto;
   align-items: center;
 }
+
 header .logo {
   flex: 1;
   font-weight: normal;
   text-transform: uppercase;
   color: white;
 }
+
 header .menu {
   flex: 1;
 }
+
 header ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
+
 header ul a {
   text-transform: uppercase;
   text-decoration: none;
   color: white;
   font-weight: lighter;
 }
+
 .back-img {
   background: url(./assets/cover.png);
   background-position: right;
@@ -41,6 +47,7 @@ header ul a {
   top: 0;
   z-index: -5;
 }
+
 .overlay {
   background-color: black;
   position: absolute;
@@ -50,12 +57,15 @@ header ul a {
   opacity: 0.5;
   z-index: -4;
 }
+
 .bottom-style {
   position: relative;
   /* background-color: khaki; */
   height: 20vh;
   width: 100%;
+  bottom: 0px;
 }
+
 .bottom-img {
   position: absolute;
   background: url(./assets/bg-bottom.svg);
@@ -63,11 +73,11 @@ header ul a {
   background-size: cover;
   width: 100%;
   height: 20vh;
-  position: absolute;
   top: 0;
   z-index: -5;
   bottom: 0;
 }
+
 .main-down {
   position: absolute;
   display: flex;
@@ -77,17 +87,20 @@ header ul a {
   height: 10vh;
   bottom: 0px;
 }
+
 .down {
   height: 80px;
   width: 40px;
   border: white solid 2px;
   border-radius: 20px;
 }
+
 .arrow {
   color: white;
   text-align: center;
   bottom: 0;
 }
+
 .introduction {
   font-weight: bold;
   text-shadow: black 3px 3px 3px;
@@ -101,22 +114,26 @@ header ul a {
   color: white;
   font-size: 52px;
 }
+
 .about {
   min-height: 100vh;
-  align-items: center;
   display: flex;
-  width: 90%;
+  align-items: center;
+  justify-content: space-between;
   margin: auto;
+  width: 90%;
 }
+
 .about-content {
   text-align: justify;
-  line-height: 3rem;
+  line-height: 2rem;
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   flex: 2;
   font-size: 18px;
 }
+
 .about-img {
   flex: 1;
   height: auto;
@@ -135,6 +152,7 @@ header ul a {
   display: flex;
   align-items: center;
 }
+
 .services .main {
   width: 90%;
   height: auto;
@@ -144,20 +162,24 @@ header ul a {
   justify-content: space-evenly;
   padding: 10px;
 }
+
 .card {
   margin: 10px;
   background-color: white;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
 }
+
 .card:hover {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
+
 .card img {
   height: 200px;
   width: auto;
   padding: 10px;
   padding-top: 40px;
 }
+
 .card h1 {
   text-align: center;
   padding: 20px;
@@ -172,10 +194,11 @@ header ul a {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 90%;
+  /* width: 90%; */
   margin: auto;
   /* background-color: yellowgreen; */
 }
+
 .technologies div img {
   filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
 
@@ -183,6 +206,7 @@ header ul a {
   padding-top: 40px;
   padding: 20px;
 }
+
 .technologies div {
   margin: 10px;
 }
@@ -190,6 +214,7 @@ header ul a {
 .technologies div img:hover {
   filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
 }
+
 .technologies p {
   text-align: center;
   padding-bottom: 40px;
@@ -197,20 +222,28 @@ header ul a {
   text-shadow: 0px;
   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 }
+
 .contact {
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #f4f4f4;
 }
-.input-box {
-  position: relative;
+.contact-main {
   width: 90%;
-  margin: auto;
-  display: block;
-  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
+.input-box {
+  flex: 2;
+}
+.LI-profile-badge {
+  padding-left: 20px;
+}
+
 .input-box .email {
   width: 100%;
   height: 5vh;
@@ -220,6 +253,7 @@ header ul a {
   padding: 20px;
   box-sizing: border-box;
 }
+
 .input-box .comment {
   width: 100%;
   height: 20vh;
@@ -229,6 +263,7 @@ header ul a {
   padding: 20px;
   box-sizing: border-box;
 }
+
 .input-box .submit {
   height: 5vh;
   width: 150px;
@@ -238,4 +273,25 @@ header ul a {
   border-radius: 0px;
   float: right;
   cursor: pointer;
+}
+
+@media screen and (max-width: 840px) {
+  header {
+    display: none;
+  }
+  .introduction {
+    height: 80vh;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about-img {
+    width: 80%;
+  }
+  .contact-main {
+    flex-direction: column;
+  }
+  .LI-profile-badge {
+    padding-top: 20px;
+  }
 }
