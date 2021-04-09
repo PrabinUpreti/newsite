@@ -4,6 +4,9 @@ button {
   padding: 0;
   font-family: "Ubuntu", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 header {
   height: 10vh;
