@@ -338,7 +338,7 @@ header ul a {
   .header2 > div > ul > li {
     /* flex-direction: column;
     align-items: flex-end; */
-    padding: 15px;
+    padding: 8px;
   }
   .back-img2 {
     max-height: 15%;
